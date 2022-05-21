@@ -10,4 +10,5 @@ def eh_primo(x):
         return True
 
 
+x = int(input("Digite um número para checar se ele é primo: "))
 print(eh_primo(5))
