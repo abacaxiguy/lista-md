@@ -7,15 +7,8 @@
 # quociente = numero mais proximo para multiplicar y, q chegue proximo de x
 
 
-def quociente(x, y):
-    for i in range(1, x):
-        if y * i > x:
-            return i - 1
-
-
 def euclides(x, y):
-    q = quociente(x, y)
-    resto = x - y * q
+    resto = x % y
     if resto == 0:
         return y
     return euclides(y, resto)
