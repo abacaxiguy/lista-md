@@ -15,7 +15,6 @@ a = int(input("Digite o a: "))
 b = int(input("Digite o b: "))
 
 cl = combinacao_linear(a, b)
-print(cl)
 
 
 def inverso(s, m):
