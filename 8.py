@@ -1,0 +1,34 @@
+# ax ≡ b mod m
+# achar o x, com x = abarra * b
+
+def combinacao_linear(a, b):
+    if b == 0:
+        s, t = 1, 0
+        return s, t
+
+    s, t = combinacao_linear(b, a % b)
+
+    return t, s - (a//b) * t
+
+
+a = int(input("Digite o a: "))
+b = int(input("Digite o b: "))
+m = int(input("Digite o m: "))
+
+
+cl = combinacao_linear(a, m)
+
+
+def inverso(s, m):
+    if s > 0 and s < m:
+        return s
+
+    s %= m
+    return s
+
+
+inverse = inverso(cl[0], m)
+
+congruencia = b * inverse if (b * inverse) <= m else (b * inverse) % m
+
+print(f'\n{a} * { {congruencia} } ≡ {b} mod({m})')
