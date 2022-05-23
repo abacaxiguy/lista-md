@@ -31,4 +31,5 @@ inverse = inverso(cl[0], m)
 
 congruencia = b * inverse if (b * inverse) <= m else (b * inverse) % m
 
-print(f'\n{a} * { {congruencia} } ≡ {b} mod({m})')
+print(f'\nax ≡ b mod(m)')
+print(f'{a} * { {congruencia} } ≡ {b} mod({m})')
