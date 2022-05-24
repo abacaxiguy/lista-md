@@ -10,19 +10,19 @@
 
 # if resto = 0, -resto =
 
-def combinacao_linear(a, b):
-    if b == 0:
+def combinacao_linear(a, m):
+    if m == 0:
         s, t = 1, 0
         return s, t
 
-    s, t = combinacao_linear(b, a % b)
+    s, t = combinacao_linear(m, a % m)
 
-    return t, s - (a//b) * t
+    return t, s - (a//m) * t
 
 
 a = int(input("Digite o a: "))
-b = int(input("Digite o b: "))
+m = int(input("Digite o m: "))
 
-cl = combinacao_linear(a, b)
+cl = combinacao_linear(a, m)
 
 print(f"s (ou x) = {cl[0]}\nt (ou y) = {cl[1]}")
