@@ -101,8 +101,6 @@ if coprimos:
 
         inverse = inverso(s, m)
 
-        # print("inverso: ", inverse)
-
         if inverse > m:
             inverse %= m
 
