@@ -25,4 +25,6 @@ def inverso(s, m):
     return s
 
 
-print(f'inverso: {inverso(cl[0], b)}')
+s = cl[0]
+
+print(f'inverso: {inverso(s, b)}')

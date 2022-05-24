@@ -27,7 +27,9 @@ def inverso(s, m):
     return s
 
 
-inverse = inverso(cl[0], m)
+s = cl[0]
+
+inverse = inverso(s, m)
 
 congruencia = b * inverse if (b * inverse) <= m else (b * inverse) % m
 
